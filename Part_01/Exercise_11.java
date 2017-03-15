@@ -16,8 +16,16 @@ public class Exercise_11 {
 
     public static void main(String[] strings) {
 
-        //...
+        int pop = 380123456;
+        double yr = 31557600;
+        double BR = yr/6, DR = yr/12, IR = yr/40;
 
+        int year;
 
+        for (year = 1; year < 4; year++) {
+            System.out.println("The population in " + year + " years will be: " + (int)(pop + (BR) + (IR) - (DR)) + ".");
+            pop = (int)(pop + (BR) + (IR) - (DR));
+
+        }
     }
 }

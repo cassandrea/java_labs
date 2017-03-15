@@ -11,7 +11,9 @@ public class Exercise_10 {
 
     public static void main(String[] strings) {
 
-        //...
+        double km = 12, min = 30.5, mi = km/1.6, hr = min/60;
+
+        System.out.println("The runner's average speed is " + mi/hr +" mph.");
 
     }
 

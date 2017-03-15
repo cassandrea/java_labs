@@ -11,6 +11,6 @@ public class Exercise_05 {
 
     public static void main(String[] arg) {
 
-        //System.out.println(...);
+        System.out.println((10.5 * 4.2 - 3.4 * 2) / (86.9 - 12.1));
     }
 }

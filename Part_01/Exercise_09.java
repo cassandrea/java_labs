@@ -11,6 +11,9 @@ public class Exercise_09 {
 
     public static void main(String[] strings) {
 
-        //...
+        double W = 2.4, H = 6.4;
+        double A = W*H, P = 2*W*H;
+
+        System.out.println("The area of this rectangle is " + A +" and the perimeter is " + P + ".");
     }
 }
