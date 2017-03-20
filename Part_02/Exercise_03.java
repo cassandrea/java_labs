@@ -18,8 +18,7 @@ public class Exercise_03 {
 
         Scanner input = new Scanner(System.in);
 
-        double meter;
-        double foot;
+        double meter, foot;
 
         System.out.print("Enter a number in feet: ");
         foot = input.nextDouble();

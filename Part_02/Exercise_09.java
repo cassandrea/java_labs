@@ -12,13 +12,12 @@ public class Exercise_09 {
     public static void main(String[] args) {
 
         char letters;
-        int count;
 
         letters = 'Z';
 
         do {
             System.out.println(letters);
-            --letters;
+            letters--;
         }
         while (letters >= 'A');
 

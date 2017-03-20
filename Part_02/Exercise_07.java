@@ -22,10 +22,10 @@ public class Exercise_07 {
 
             System.out.print("Give me a number of minutes, up to 1,000,000,000: ");
             minutes = input.nextInt();
-            days = minutes/60/12;
+            days = minutes/60/24;
             years = days/365;
 
-            System.out.printf(minutes + " minutes would be " + days + " days and " + years + " years.");
+            System.out.printf(minutes + " minutes would be approximately " + days + " days and " + years + " years.");
         }
     }
 

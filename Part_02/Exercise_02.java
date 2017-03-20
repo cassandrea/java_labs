@@ -17,14 +17,14 @@ import java.util.Scanner;
 public class Exercise_02 {
 
     public static void main(String[] args) throws java.io.IOException {
-        double area, volume;
+        double area, volume, radius, length;
 
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter radius: ");
-        double radius = input.nextDouble();
+        radius = input.nextDouble();
         System.out.print("Enter length: ");
-        double length = input.nextDouble();
+        length = input.nextDouble();
 
 
         area = (2 * Math.PI * radius * length) + ( 2 * radius * radius * Math.PI);

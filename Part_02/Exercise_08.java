@@ -20,8 +20,9 @@ public class Exercise_08 {
         int Num;
         int search;
 
-        System.out.print("Give me a number, up to 1,000,000,000: ");
+        System.out.print("Give me a number, 0 to 1,000,000,000: ");
         Num = input.nextInt();
+        input.close();
 
         search = 0;
         while( search <= 1000000000 ) {
@@ -29,8 +30,8 @@ public class Exercise_08 {
                 System.out.printf("Your number is: " + search);
                 break;
             }
-            else
-                search++;
+            search++;
+
         }
 
     }

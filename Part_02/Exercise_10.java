@@ -21,6 +21,8 @@ public class Exercise_10 {
         int num;
         int range;
 
+
+
         for (num = 2; num <= 100; num++) {
             isprime = true;
 

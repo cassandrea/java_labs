@@ -23,36 +23,40 @@ public class Exercise_06 {
         System.out.print("Type a number 1 - 9: ");
         number = input.nextInt();
 
-         switch (number) {
-             case (1):
-                 System.out.println("The number 1 is spelled \"ONE\"");
-                 break;
-             case (2):
-                 System.out.println("The number 2 is spelled \"TWO\"");
-                 break;
-             case (3):
-                 System.out.println("The number 3 is spelled \"THREE\"");
-                 break;
-             case (4):
-                 System.out.println("The number 4 is spelled \"FOUR\"");
-                 break;
-             case (5):
-                 System.out.println("The number 5 is spelled \"FIVE\"");
-                 break;
-             case (6):
-                 System.out.println("The number 6 is spelled \"SIX\"");
-                 break;
-             case (7):
-                 System.out.println("The number 7 is spelled \"SEVEN\"");
-                 break;
-             case (8):
-                 System.out.println("The number 8 is spelled \"EIGHT\"");
-                 break;
-             case (9):
-                 System.out.println("The number 9 is spelled \"NINE\"");
-                 break;
-             default:
-                 System.out.println("OTHER");
+         if (number >= 1 && number <=9)
+             switch (number) {
+                 case (1):
+                     System.out.println("The number 1 is spelled \"ONE\"");
+                     break;
+                 case (2):
+                     System.out.println("The number 2 is spelled \"TWO\"");
+                     break;
+                 case (3):
+                     System.out.println("The number 3 is spelled \"THREE\"");
+                     break;
+                 case (4):
+                     System.out.println("The number 4 is spelled \"FOUR\"");
+                     break;
+                 case (5):
+                     System.out.println("The number 5 is spelled \"FIVE\"");
+                     break;
+                 case (6):
+                     System.out.println("The number 6 is spelled \"SIX\"");
+                     break;
+                 case (7):
+                     System.out.println("The number 7 is spelled \"SEVEN\"");
+                     break;
+                 case (8):
+                     System.out.println("The number 8 is spelled \"EIGHT\"");
+                     break;
+                 case (9):
+                     System.out.println("The number 9 is spelled \"NINE\"");
+                     break;
+                 default:
+                     System.out.println("OTHER");
+             }
+          else
+             System.out.println("OTHER");
          }
     }
-}
+
