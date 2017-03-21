@@ -1,0 +1,77 @@
+
+Answer the following questions
+
+
+1) What is an instance variable?
+A: A variable defined in a class that all objects will have a copy of
+
+2) How do you create a new object?
+A: classname objectName = new classname;
+
+3) After creating a new object, how do you set that objects instance variables?
+A: objectName.variable = x
+
+4) What is a reference variable? Why do you need to be careful with reference variables?
+A: A variable that refers to another object. This does not actually create a new object, just a reference to an existing object.
+
+5) How many methods can you have in a class?
+A: As many as you need, although it should be limited to related methods
+
+6) How do you exit a method at any point?
+A: return;
+
+7) What is the method signature required to return an "int" from a method?
+A: int methodName();
+
+8) Assuming "int num = 10", what is the syntax to return "num" from a method?
+A: return num;
+
+9) How do you pass a parameter to a method?
+A: int methodName(int parameter); {
+//statements
+}
+
+objectName.methodName(10);
+
+10) What is the method signature for a method named sum() that takes two int parameters
+    and returns their sum as in int?
+A: int sum(int a, int b) {
+    return a + b;
+
+11) What is a constructor?
+A: A method within a class that has the same name and defines the parameters of creating an object of that class
+
+12) How does Java treat a class without a constructor?
+A: Initializes all instance variables to default values, zero, null, and false
+
+13) What would the constructor for "public class Animal" look like?
+A: Animal(parameters) {
+//statements
+}
+
+14) What is the effect of passing parameters to a constructor?
+A: The values passed to the constructor are assigned to the corresponding instance variables
+
+15) When should you pass parameters to a constructor?
+A: When they are listed in the constructor
+
+16) What does the finalize() method do?
+A: It is a method that is used when you need to ensure something takes place right before an object is garbage collected
+
+17) What does the "this" keyword do?
+A: It is a reference to the instance variables of the object on which it was called
+(as opposed to variables created in the method that may have the same name)
+
+18) When should you use the "this" keyword?
+A: When method and instance variables share the same name.
+
+19) Write an example of the "this" keyword in action.
+A:
+
+class Animals {
+
+string species;
+
+Animals(species) {
+    this.species = species;
+    }
