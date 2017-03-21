@@ -10,6 +10,8 @@ A: classname objectName = new classname;
 
 3) After creating a new object, how do you set that objects instance variables?
 A: objectName.variable = x
+This is the simplest method, but there are better ways. Getters and Setters would be better - you can have private
+instance variables and public methods to access the variables
 
 4) What is a reference variable? Why do you need to be careful with reference variables?
 A: A variable that refers to another object. This does not actually create a new object, just a reference to an existing object.

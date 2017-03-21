@@ -25,143 +25,140 @@ import java.util.Scanner;
 
 
  */
-//public class Monkey {
-//    int typeOfMonkey;
-//    int numberOfMonkeys;
-//    int monkeyAppetite;
-//
-//    //constructor
-//    Monkey() {
-//        typeOfMonkey = 1;
-//        numberOfMonkeys = 1;
-//    }
-//
-//    //methods to collect data
-//    public int getNumberOfMonkeys() {
-//
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("How many monkeys are there?");
-//        numberOfMonkeys = input.nextInt();
-//        return numberOfMonkeys;
-//    }
-//
-//    public int getTypeOfMonkey() {
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("Which monkey do they most resemble?\n" +
-//                "1. Curious George/\n" +
-//                "2. Rafiki\n" +
-//                "3. King Kong\n");
-//        typeOfMonkey = input.nextInt();
-//        return typeOfMonkey;
-//    }
-//
-//    //method to calculate monkey appetite
-//    public int getMonkeyAppetite(int typeOfMonkey, int numberOfMonkeys) {
-//        for (int x = 1; x < 5; x += typeOfMonkey) {
-//            monkeyAppetite += (x + numberOfMonkeys);
-//        }
-//
-//        if (monkeyAppetite <= 0) {
-//            monkeyAppetite = 1;
-//        } else if (monkeyAppetite > 0 && monkeyAppetite > 1000) {
-//            monkeyAppetite = 2;
-//        } else if (monkeyAppetite >= 1000) {
-//            monkeyAppetite = 3;
-//        } else monkeyAppetite = 4;
-//        return monkeyAppetite;
-//    }
-//}
-//
-//
-//class User {
-//    int height = 1;
-//    int beers = 1;
-//    int x = 1;
-//
-//    //constructor
-//    User() {
-//        int height = 1;
-//        int beers = 1;
-//    }
-//
-//    //methods to collect data
-//    int getHeight() {
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("How tall are you?");
-//        int height = input.nextInt();
-//        return height;
-//    }
-//
-//    int getBeers() {
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("How many beers have you drank today?");
-//        int beers = input.nextInt();
-//        return beers;
-//    }
-//
-//    //method to calculate data - return int
-//    int getPersonStrength(int height, int beers) {
-//        int personStrength;
-//
-//        for (x = 1; x < 5; x += beers) {
-//            personStrength += (x + height / 4);
-//        }
-//
-//        if (personStrength <= 0) {
-//            personStrength = 1;
-//        } else if (personStrength > 0 && personStrength > 1000) {
-//            personStrength = 2;
-//        } else if (personStrength >= 1000) {
-//            personStrength = 3;
-//        } else personStrength = 4;
-//
-//        return personStrength;
-//    }
-//}
-//class Bananas {
-//
-//    public int getBananas( int personStrength, int monkeyAppetite) {
-//        //calculate and display result
-//        int bananas = (15*monkeyAppetite)/personStrength;
-//        return bananas;
-//    }
-//}
-//
-//class MonkeyController {
-//
-//int bananas;
-//
-//    public static void main(String[] args)
-//            throws java.io.IOException {
-//
-//        //utilize constructors to make 2 objects
-//        Monkey monkey1 = new Monkey();
-//        User user1 = new User();
-//        Bananas number1 = new Bananas();
-//
-//        System.out.println("Ahhhhh! The monkeys are after you!\n" +
-//                "Let's calculate how many bananas you need to fend them off.\n\n");
-//
-//        //invoke monkey methods
-//        int numberOfMonkeys = monkey1.getNumberOfMonkeys();
-//        int typeOfMonkey = monkey1.getTypeOfMonkey();
-//
-//        int monkeyAppetite = monkey1.getMonkeyAppetite(numberOfMonkeys, typeOfMonkey);
-//
-//        //invoke user methods
-//        int height = user1.getHeight();
-//        int beers = user1.getBeers();
-//
-//        int personStrength = user1.getPersonStrength(height, beers);
-//
-//        int bananas = number1.getBananas(personStrength, monkeyAppetite);
-//
-//        System.out.println("You will need " + bananas + (" bananas to fend off all those monkeys!");
-//
-//    }
-//
-//
-//}
+class Monkey {
+    int typeOfMonkey;
+    int numberOfMonkeys;
+    int monkeyAppetite;
+
+    //constructor
+    Monkey() {
+        typeOfMonkey = 1;
+        numberOfMonkeys = 1;
+    }
+
+    //methods to collect data
+    public int getNumberOfMonkeys() {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("How many monkeys are there?");
+        numberOfMonkeys = input.nextInt();
+        return numberOfMonkeys;
+    }
+
+    public int getTypeOfMonkey() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Which monkey do they most resemble?\n" +
+                "1. Curious George/\n" +
+                "2. Rafiki\n" +
+                "3. King Kong\n");
+        typeOfMonkey = input.nextInt();
+        return typeOfMonkey;
+    }
+
+    //method to calculate monkey appetite
+    public int getMonkeyAppetite(int typeOfMonkey, int numberOfMonkeys) {
+
+        monkeyAppetite = (typeOfMonkey*numberOfMonkeys);
+
+        if (monkeyAppetite <= 0) {
+            monkeyAppetite = 1;
+        } else if (monkeyAppetite > 0 && monkeyAppetite > 1000) {
+            monkeyAppetite = 2;
+        } else if (monkeyAppetite >= 1000) {
+            monkeyAppetite = 3;
+        } else monkeyAppetite = 4;
+        return monkeyAppetite;
+    }
+}
+
+
+class User {
+    int height = 1;
+    int beers = 1;
+    int x = 1;
+
+    //constructor
+    User() {
+        int height = 1;
+        int beers = 1;
+    }
+
+    //methods to collect data
+    int getHeight() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("How tall are you?");
+        int height = input.nextInt();
+        return height;
+    }
+
+    int getBeers() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("How many beers have you drank today?");
+        int beers = input.nextInt();
+        return beers;
+    }
+
+    //method to calculate data - return int
+    int getPersonStrength(int height, int beers) {
+        int personStrength;
+
+        personStrength = (beers*height);
+
+        if (personStrength <= 0) {
+            personStrength = 1;
+        } else if (personStrength > 0 && personStrength > 1000) {
+            personStrength = 2;
+        } else if (personStrength >= 1000) {
+            personStrength = 3;
+        } else personStrength = 4;
+
+        return personStrength;
+    }
+}
+class Bananas {
+
+    public int getBananas( int personStrength, int monkeyAppetite) {
+        //calculate and display result
+        int bananas = (15*monkeyAppetite)/personStrength;
+        return bananas;
+    }
+}
+
+class MonkeyController {
+
+int bananas;
+
+    public static void main(String[] args)
+            throws java.io.IOException {
+
+        //utilize constructors to make 2 objects
+        Monkey monkey1 = new Monkey();
+        User user1 = new User();
+        Bananas number1 = new Bananas();
+
+        System.out.println("Ahhhhh! The monkeys are after you!\n" +
+                "Let's calculate how many bananas you need to fend them off.\n\n");
+
+        //invoke monkey methods
+        int numberOfMonkeys = monkey1.getNumberOfMonkeys();
+        int typeOfMonkey = monkey1.getTypeOfMonkey();
+
+        int monkeyAppetite = monkey1.getMonkeyAppetite(numberOfMonkeys, typeOfMonkey);
+
+        //invoke user methods
+        int height = user1.getHeight();
+        int beers = user1.getBeers();
+
+        int personStrength = user1.getPersonStrength(height, beers);
+
+        int bananas = number1.getBananas(personStrength, monkeyAppetite);
+
+        System.out.println("You will need " + bananas + " bananas to fend off all those monkeys!");
+
+    }
+
+
+}
 
 
 
