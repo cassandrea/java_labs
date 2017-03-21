@@ -42,7 +42,7 @@ A: int sum(int a, int b) {
     return a + b;
 
 11) What is a constructor?
-A: A method within a class that has the same name and defines the parameters of creating an object of that class
+A: A method-ish within a class that has the same name and defines the parameters of creating an object of that class
 
 12) How does Java treat a class without a constructor?
 A: Initializes all instance variables to default values, zero, null, and false
@@ -56,7 +56,7 @@ A: Animal(parameters) {
 A: The values passed to the constructor are assigned to the corresponding instance variables
 
 15) When should you pass parameters to a constructor?
-A: When they are listed in the constructor
+A: When you create a new object
 
 16) What does the finalize() method do?
 A: It is a method that is used when you need to ensure something takes place right before an object is garbage collected
@@ -72,9 +72,8 @@ A: When method and instance variables share the same name.
 A:
 
 class Animals {
+    String species;
 
-string species;
-
-Animals(species) {
+    Animals(String species) {
     this.species = species;
     }

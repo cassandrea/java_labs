@@ -48,7 +48,7 @@ class Monkey {
     public int getTypeOfMonkey() {
         Scanner input = new Scanner(System.in);
         System.out.println("Which monkey do they most resemble?\n" +
-                "1. Curious George/\n" +
+                "1. Curious George\n" +
                 "2. Rafiki\n" +
                 "3. King Kong\n");
         typeOfMonkey = input.nextInt();
@@ -73,9 +73,6 @@ class Monkey {
 
 
 class User {
-    int height = 1;
-    int beers = 1;
-    int x = 1;
 
     //constructor
     User() {
@@ -87,15 +84,13 @@ class User {
     int getHeight() {
         Scanner input = new Scanner(System.in);
         System.out.println("How tall are you, in inches?");
-        int height = input.nextInt();
-        return height;
+        return input.nextInt();
     }
 
     int getBeers() {
         Scanner input = new Scanner(System.in);
         System.out.println("How many beers have you drank today?");
-        int beers = input.nextInt();
-        return beers;
+        return input.nextInt();
     }
 
     //method to calculate data - return int
@@ -119,14 +114,11 @@ class Bananas {
 
     public int getBananas( int personStrength, int monkeyAppetite) {
         //calculate and display result
-        int bananas = (15*monkeyAppetite)/personStrength;
-        return bananas;
+        return (15*monkeyAppetite)/personStrength;
     }
 }
 
 class MonkeyController {
-
-int bananas;
 
     public static void main(String[] args)
             throws java.io.IOException {

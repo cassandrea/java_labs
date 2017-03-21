@@ -19,16 +19,36 @@ class Exercise_06 {
         long totalSeconds = totalMilliseconds/1000;
 
         // Get the current second within the minute within the hour
+        long currentSecond = totalSeconds%60;
 
         // Get total minutes
+        long totalMinutes = totalSeconds/60;
 
         // Get the current minute in the hour
+        long currentMinute = totalMinutes%60;
 
         // Get the total hours
+        long totalHours = totalMinutes/60;
 
         // Get the current hour
+        long currentHour = totalHours%24;
 
         // Display results using a 12 hour clock, include AM or PM
+        long zoneHour = currentHour + timeZoneChange;
 
+        if (zoneHour < 0) {
+            System.out.println((zoneHour + 12) + ":" + currentMinute + ":" + currentSecond + " PM");
+        }
+        else {
+            if (zoneHour < 12) {
+                System.out.println((zoneHour - 12) + ":" + currentMinute + ":" + currentSecond + " PM");
+            } else if (zoneHour == 12) {
+                System.out.println(zoneHour + ":" + currentMinute + ":" + currentSecond + " PM");
+            } else if (zoneHour == 24) {
+                System.out.println((zoneHour - 12) + ":" + currentMinute + ":" + currentSecond + " AM");
+            } else {
+                System.out.println(zoneHour + ":" + currentMinute + ":" + currentSecond + " AM");
+            }
+        }
     }
 }
