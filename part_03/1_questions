@@ -15,6 +15,7 @@ instance variables and public methods to access the variables
 
 4) What is a reference variable? Why do you need to be careful with reference variables?
 A: A variable that refers to another object. This does not actually create a new object, just a reference to an existing object.
+this is only valid on objects. With primitive types, it will copy the other type, but it won't update accordingly.
 
 5) How many methods can you have in a class?
 A: As many as you need, although it should be limited to related methods

@@ -86,7 +86,7 @@ class User {
     //methods to collect data
     int getHeight() {
         Scanner input = new Scanner(System.in);
-        System.out.println("How tall are you?");
+        System.out.println("How tall are you, in inches?");
         int height = input.nextInt();
         return height;
     }
