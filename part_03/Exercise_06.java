@@ -31,24 +31,17 @@ class Exercise_06 {
         long totalHours = totalMinutes/60;
 
         // Get the current hour
-        long currentHour = totalHours%24;
+        long currentHour = (totalHours - timeZoneChange)%24;
 
         // Display results using a 12 hour clock, include AM or PM
-        long zoneHour = currentHour + timeZoneChange;
-
-        if (zoneHour < 0) {
-            System.out.println((zoneHour + 12) + ":" + currentMinute + ":" + currentSecond + " PM");
-        }
-        else {
-            if (zoneHour < 12) {
-                System.out.println((zoneHour - 12) + ":" + currentMinute + ":" + currentSecond + " PM");
-            } else if (zoneHour == 12) {
-                System.out.println(zoneHour + ":" + currentMinute + ":" + currentSecond + " PM");
-            } else if (zoneHour == 24) {
-                System.out.println((zoneHour - 12) + ":" + currentMinute + ":" + currentSecond + " AM");
-            } else {
-                System.out.println(zoneHour + ":" + currentMinute + ":" + currentSecond + " AM");
-            }
+        if (currentHour > 12) {
+                System.out.println((currentHour - 12) + ":" + currentMinute + ":" + currentSecond + " PM");
+        } else if (currentHour == 12) {
+                System.out.println(currentHour + ":" + currentMinute + ":" + currentSecond + " PM");
+        } else if (currentHour == 24) {
+                System.out.println((currentHour - 12) + ":" + currentMinute + ":" + currentSecond + " AM");
+        } else {
+                System.out.println(currentHour + ":" + currentMinute + ":" + currentSecond + " AM");
         }
     }
 }
