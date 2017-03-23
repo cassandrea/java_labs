@@ -73,12 +73,19 @@ A: a set of classes that implement various data structures, such as lists, vecto
 
 20) How do you iterate over a two-dimensional array? Demonstrate using psuedo code.
 A: iterate through each array
-
 parent array contains children array
 iterate through each child array until you've reached the length of the parent array
 
+int[][] example = int [5][5];
+
+for (int i=0; i < example.length; i++) {
+    for (int t = 0; t < example[i].length; t++) {
+        System.out.println(example[i][t]);
+     }
+}
+
 21) What is a String?
-A: a data type that combines a string of characters into an object
+A: a data type that combines a string of characters into an object, any character within "".
 
 22) What are a few common methods for operating on Strings?
 A:  boolean equals(str)

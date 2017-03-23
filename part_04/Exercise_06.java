@@ -14,7 +14,7 @@ class Queue {
         int queueIn, queueOut;
 
         Queue(int size) {
-            queue = new int[101];
+            queue = new int[size];
             queueIn = queueOut = 0;
         }
         void put(int number) {

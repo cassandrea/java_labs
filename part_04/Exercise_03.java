@@ -14,11 +14,10 @@ class twoDArray {
     public static void main (String [] args) {
 
         int twoD [][] = new int [5][10];
-        int x, y;
 
-        for (x=0 ;x<5; ++x) {
-            for (y = 0; y < 10; ++y) {
-                twoD[x][y] = (x*10)+y+1;
+        for (int x=0 ;x<twoD.length; x++) {
+            for (int y = 0; y < twoD[x].length; y++) {
+                twoD[x][y] = (x*10)+y;
                 System.out.print(twoD[x][y] + " ");
             }
             System.out.println();
