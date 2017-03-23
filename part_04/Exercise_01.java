@@ -17,15 +17,20 @@ class NumberSort {
     public static void main(String [] args ) {
 
         int numbers [] = new int[10];
-        int i = 0;
+        int i = 0, count =0;
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter 10 integers, pressing enter after each one.");
          do {
             numbers[i] = input.nextInt();
             i++;
-         } while (i < numbers.length - 1);
+         } while (i < numbers.length);
 
-        for(int print : numbers) System.out.println(numbers[print]);
+        for (count=1;count< numbers.length; count+=2){
+                System.out.println(numbers[count]);
+        }
+        for (count=8;count >=0; count-=2){
+            System.out.println(numbers[count]);
+        }
     }
 }

@@ -9,14 +9,14 @@ package part_04;
 class enhancedLoop {
     public static void main(String [] args) {
         int array[] = new int[7];
-        int populate = 1, print = 1;
+        int populate = 1, print = 0;
 
         for (int x = 0; x < array.length; x++) {
             array[x] = populate;
             populate++;
         }
         for (int y : array) {
-            System.out.println("Index " + print + " :" + array[y]);
+            System.out.println("Index " + print + " :" + y);
             print ++;
         }
     }

@@ -16,9 +16,9 @@ class twoDArray {
         int twoD [][] = new int [5][10];
         int x, y;
 
-        for (x=0 ;x<5; x++) {
-            for (y = 0; y < 10; y++) {
-                twoD[x][y] = (x*4)+y+1;
+        for (x=0 ;x<5; ++x) {
+            for (y = 0; y < 10; ++y) {
+                twoD[x][y] = (x*10)+y+1;
                 System.out.print(twoD[x][y] + " ");
             }
             System.out.println();

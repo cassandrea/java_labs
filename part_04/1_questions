@@ -4,8 +4,8 @@ Answer the following questions:
 1) What is an array?
 A: an indexed data structure
 
-2) What is the code required to create (instantiate) a String array with size 10 named "cats"?
-A: String cats[] = mew String[10];
+2) Write the code required to create (instantiate) a String array with size 10 named "cats"?
+A: String cats[] = new String[10];
 
 3) What is a multidimensional array?
 A: an array of arrays (and so on and so forth)
@@ -20,13 +20,13 @@ A: dogs[9]
 A: an error when you try to use an element outside of the array length
 
 7) Using one line of code, demonstrate how to retrieve the second to the last item from a int array.
-A: array[array.length -3]
+A: int x = array[array.length -2]
 
 8) What is the maximum allowable size of an array in Java?
-A: it's limited only by the max size for the data type
+A: it's limited only by the max size for integers
 
 9) What is a bubble sort?
-A: sort method that runs through the items and moves the smallest to the left, then iterates until sorted
+A: a sort method that runs through the items and moves the smallest to the left, then iterates until sorted
 
 10) How does a bubble sort work?
 A: see 9
@@ -35,7 +35,7 @@ A: see 9
 A: when the data contained within the arrays will be shorter/longer than the others. bus schedule with fewer times on weekends
 
 12) Demonstrate how to iterate through an array, printing each value, using a for loop.
-A: for(x =1, x > example.length, x++) {
+A: for(x =1; x > example.length; x++) {
     System.out.println(example[x]);
     }
 
@@ -49,7 +49,7 @@ A: while (x > example.length) {
 A: a list of elements that can be accessed on a first-in-first-out basis
 
 15) What are the two primary operations that a queue performs?
-A: put and get
+A: put() and get()
 
 16) What is a stack?
 A: a list of elements that can be accessed on a first-in-last-out basis
@@ -58,7 +58,15 @@ A: a list of elements that can be accessed on a first-in-last-out basis
 A: the order in which you can access elements
 
 18) When would you use an enhanced for loop?
-A: when you need to cycle through a collection of objects
+A: when you need to cycle through a collection of objects (member of the collection class)
+
+for (int iteratorCount = 0; iteratorCount < array.length; iteratorCount++){
+    System.out.println(iteratorCount);
+    System.out.println(array[iteratorCount]);
+}
+for (int actualIntInArray : Array) {
+    System.out.println(actualIntInArray);
+    }
 
 19) What is "The Collections Framework"? What classes does it include?
 A: a set of classes that implement various data structures, such as lists, vectors, sets, and maps

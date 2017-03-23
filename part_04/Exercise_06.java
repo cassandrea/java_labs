@@ -35,16 +35,15 @@ class Queue {
 class everyOtherQueue {
     public static void main(String [] args) {
         Queue oneHundred = new Queue (101);
-        int number, i;
+        int number, i, other =0;
 
         for (i=0; i<101; i++) {
             oneHundred.put(i);
         }
         for (i=0; i < 101;i++) {
             number = oneHundred.get();
-            for (int x = 0; x < 101; x += 2) {
-                System.out.println(number);
-            }
+            if (other%2 ==0) System.out.println(number);
+            other++;
         }
     }
 }
