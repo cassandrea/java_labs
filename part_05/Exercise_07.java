@@ -6,26 +6,3 @@ package part_05;
  * just once, in one place, set the static instance variable in class_02. Afterwards, print out the value of each instance
  * variable and the static variable for each class.
  */
-//class event {
-//    private String occassion;
-//    private int numberOfGuests;
-//    private double budget, ticketPrice;
-//    private boolean isBusiness, isMeal;
-//
-//
-//    double netRevenue(int guests, double cost, double ticketPrice) {
-//        double netRevenue = guests*ticketPrice-cost;
-//        return netRevenue;
-//    }
-//}
-//class cookies {
-//    private String type;
-//    private int numberOfCookies;
-//    private double bites, cost;
-//    private boolean isChocolate, isSavory;
-//
-//    double cookieCost(int number, double cost) {
-//        cost = number*cost;
-//        return cost;
-//    }
-//}

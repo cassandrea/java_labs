@@ -7,15 +7,3 @@ package part_05;
  * out "Hello Recursion!" 10 times.
  *
  */
-
-//class cookies {
-//    private String type;
-//    private int numberOfCookies;
-//    private double bites, cost;
-//    private boolean isChocolate, isSavory;
-//
-//    double cookieCost(int number, double cost) {
-//        cost = number*cost;
-//        return cost;
-//    }
-//}

@@ -8,26 +8,3 @@ package part_05;
  * within each instance of Class_02 to modify Class_02's private instance variables.
  *
  */
-//class event {
-//    private String occassion;
-//    private int numberOfGuests;
-//    private double budget, ticketPrice;
-//    private boolean isBusiness, isMeal;
-//
-//
-//    double netRevenue(int guests, double cost, double ticketPrice) {
-//        double netRevenue = guests*ticketPrice-cost;
-//        return netRevenue;
-//    }
-//}
-//class cookies {
-//    private String type;
-//    private int numberOfCookies;
-//    private double bites, cost;
-//    private boolean isChocolate, isSavory;
-//
-//    double cookieCost(int number, double cost) {
-//        cost = number*cost;
-//        return cost;
-//    }
-//}
