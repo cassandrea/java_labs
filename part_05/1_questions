@@ -1,0 +1,104 @@
+
+Answer the following:
+
+1) What are the access control modifiers (acm) provided in Java?
+A: public, private, protected
+
+2) Briefly explain each acm and how they differentiate from each other?
+A: public = openly accessible
+private = accessible only within the class
+protected =  accessible only within the package
+
+3) Why do we use acm's?
+A: to provide control over data access
+
+4) What is the risk of not using acm's?
+A: improper values could be assigned or malicious use could occur
+
+5) Write a method signature that receives an object of type "Car" as a parameter.
+A: public void garage(Car x) {}
+
+6) Write a method signature that returns an object of type "Car".
+A: public Car garage(int remote) {}
+
+7) What is a very important consideration to keep in mind when passing objects (hint: by reference) from one
+method to another?
+A: Passing an object to a method does not create a copy of the object, but refers to it directly.
+Anything that happens to the object in the method happens in real life.
+
+8) What is method overloading?
+A: creating versions of a method using the same name, but receiving different parameters
+
+9) Why is method overloading useful? (Hint: as compared to the implementation in the C language.)
+A: the same method can accept parameters of different types and number
+
+10) How do you overload a method? What signifies that a method is being overloaded?
+A: create a method with the same name as an existing method but requiring different types/number of parameters
+
+11) Below, by writing just the method signature, demonstrate overloading a method 3 times.
+A:  public void monkeys(int number) {}
+    public void monkeys(double weight) {}
+    public void monkeys(String name) {}
+
+12) How do you overload a constructor? What signifies that a constructor is being overloaded?
+A: in the same manner as a method - receive different variables than an existing constructor for the same class
+
+13) Why do we overload constructors?
+A: to receive variables of different types to the same method - regardless of what the data is,
+you can still apply the same method, without having to use different names
+
+14) Below, by writing just the constructor signature, demonstrate overloading a constructor 3 times.
+A:  Monkeys(int number) {}
+    Monkeys(double weight) {}
+    Monkeys(String name) {}
+
+15) What is recursion?
+A: calling a method within a method
+
+16) What important considerations must you keep in mind when using recursion?
+A: there needs to be a condition in which the recursion breaks - anything following the recursive call is not read until
+the recursion has broken and returned to the first level
+
+17) How do you make a method recursive?
+A: call the method within the method
+
+18) How do you escape a recursive method?
+A: make the recursive method call conditional - such as an if statement
+
+19) Explain what "static" is all about?
+A: static allows a class, variable, method, etc to be used/called before an object is created
+
+20) When should you use "static"?
+A: when you need to use the member prior to any instances of the class or when a value of a variable will be the same
+for all members/instances of the class
+
+21) What differentiates static variables from instance variables?
+A: instance variables can differ from instance to instance
+
+22) What is a the quicksort? Briefly describe how the quicksort works.
+A: a sorting method based of partitions
+pick an item in a list, for every item to the right with a lesser value, move it to the right and vice versa.
+Continue until sorted.
+
+23) What is a nested, or inner, class?
+A: a class within a class
+
+24) What is the scope of a nested class?
+A: everything in the outer class is accessible to the inner class, but nothing outside the inner class can access it
+
+25) What is a variable-arity method?
+A: a method that can take a variable number of arguments
+
+26) What makes a variable-arity method unique? When should you use it?
+A: the parameter list is not fixed - so use when you don't know how many parameters you will receive
+
+27) What is the shorthand name for variable-arity?
+A: varargs
+
+28) What important considerations must you keep in mind when using variable-arity methods? (hint: ambiguity)
+A:  the varargs parameter should be the last declared
+    there can only be one varargs parameter
+    overloading can cause ambiguity when an empty parameter is used - best to not overload if using varargs
+
+
+
