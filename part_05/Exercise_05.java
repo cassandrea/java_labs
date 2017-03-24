@@ -7,3 +7,20 @@ package part_05;
  * out "Hello Recursion!" 10 times.
  *
  */
+
+class Recursion {
+
+public static void main(String [] args) {
+
+    System.out.println(methodRecursive(7));
+
+}
+static String methodRecursive(int x){
+        String statement = "Hello Recursion!";
+
+        if (x == 1) return "1";
+
+        statement = methodRecursive(x-1);
+        return statement;
+    }
+}

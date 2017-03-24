@@ -53,7 +53,7 @@ A:  Monkeys(int number) {}
     Monkeys(String name) {}
 
 15) What is recursion?
-A: calling a method within a method
+A: a method that calls itself
 
 16) What important considerations must you keep in mind when using recursion?
 A: there needs to be a condition in which the recursion breaks - anything following the recursive call is not read until
@@ -73,15 +73,16 @@ A: when you need to use the member prior to any instances of the class or when a
 for all members/instances of the class
 
 21) What differentiates static variables from instance variables?
-A: instance variables can differ from instance to instance
+A: instance variables can differ from instance to instance, static variables are the same across the class
+instance variables belong to instances of a class, static variables belong to the class itself
 
 22) What is a the quicksort? Briefly describe how the quicksort works.
-A: a sorting method based of partitions
-pick an item in a list, for every item to the right with a lesser value, move it to the right and vice versa.
-Continue until sorted.
+A: a sorting method based off partitions
+pick an item in a list - pivot point, for every item to the right with a lesser value, move it to the right and vice versa.
+Continue recursively until sorted.
 
 23) What is a nested, or inner, class?
-A: a class within a class
+A: a class within a class - outer class with an inner class inside - the inner class is a member of the outer class
 
 24) What is the scope of a nested class?
 A: everything in the outer class is accessible to the inner class, but nothing outside the inner class can access it
