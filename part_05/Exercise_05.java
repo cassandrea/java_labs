@@ -12,15 +12,15 @@ class Recursion {
 
 public static void main(String [] args) {
 
-    System.out.println(methodRecursive(7));
+    int a = 7;
+    methodRecursive(a);
 
 }
-static String methodRecursive(int x){
-        String statement = "Hello Recursion!";
+static void methodRecursive(int x){
 
-        if (x == 1) return "1";
+    if (x == 0) return;
 
-        statement = methodRecursive(x-1);
-        return statement;
+    System.out.println("Hello Recursion!");
+    methodRecursive(--x);
     }
 }
