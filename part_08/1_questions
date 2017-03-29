@@ -1,0 +1,79 @@
+
+1) Describe the exception hierarchy.
+A: The superclass for all exceptions is "Throwable" - it has two subclasses, "Error" & "Exception"
+
+2) What is a try/catch statement?
+A: try and catch are keywords
+if you think an exception is possible, you can preface a code block with the keyword try followed by the keyword
+catch and a code block that will execute if an exception occurs
+
+3) Why do we use try/catch statements?
+A: to avoid program failure when exceptions occur
+
+4) Write a full example of a try/catch/finally statement that catches two distinct exceptions
+A:  try {
+        int array[] = new int[2];
+        array[4] = 20;
+        int x = 120/0;
+    }
+    catch (ArrayIndexOutOfBoundsException exc) {
+        System.out.println("Index out of bounds");
+    }
+    catch (ArithmeticException exc) {
+        System.out.println("Can't divide by 0");
+    }
+    finally{
+        System.out.println("done");
+    }
+
+5) What does it mean to "throw" an exception? How does it work?
+A: you can manually throw an exception by using the throw statement in a method signature - this sends the
+exception to the calling method to deal with
+
+6) What happens if your application encounters an exception and you don't catch it or throw it?
+A: it fails
+
+7) When catching exceptions in an inheritance hierarchy, should you catch the subclass exception or the
+superclass exception first? Why?
+A: subclass first - because otherwise it would never get past the superclass
+
+8) Write a nested try/catch statement.
+A:  try {
+         int array[] = new int[2];
+         array[4] = 20;
+            try {
+                int x = 120/0;
+                }
+            catch (ArithmeticException exc) {
+                System.out.println("Index out of bounds");
+            }
+         }
+         catch (ArrayIndexOutOfBoundsException exc) {
+            System.out.println("Can't divide by 0");
+         }
+
+9) What does it mean to rethrow an exception?
+A: an exception caught by one catch can be rethrown to an outer catch
+
+10) What are the 7 methods that come with the Throwable class?
+A:  Throwable fillInStackTrace();
+    String getLocalizedMessage();
+    String getMessage();
+    void printStackTrace();
+    void printStackTrace(PrintStream stream);
+    void printStackTrace(PrintWriter stream);
+    String to String();
+
+11) What does the "finally" block do?
+A: ensures that the following code block is executed after a try/catch statement is exited
+
+12) When is the finally block executed? Will it ever not be executed?
+A: after the try/catch statement is exited - no
+
+13) What are the three recently added features to Java exceptions?
+A:  try-with-resources statement - supports automatic resource management
+    multi-catch - allows two or more exceptions to be caught by the same catch clause
+    final rethrow - restricts the type of exceptions that can be rethrown to only those checked exceptions
+    that the associated try block throws, that are not handled by a preceding catch clause, and that
+    are a subtype or supertype of the parameter
+
