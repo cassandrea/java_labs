@@ -1,110 +1,94 @@
 package part_08;
 
-import java.util.Scanner;
-
 class Stack {
-    private String[] s; // this array holds the Stack
-    private int index; // the push and pop index
-    private int exceptionFlag;
+    private int[] s; // this array holds the Stack
+    private int index; // the top of the stack index
 
     // Construct an empty Stack given its size.
     Stack(int size) {
-        s = new String[size]; // allocate memory for Stack
+        s = new int[size]; // allocate memory for Stack
         index = 0;
     }
-    // Create a new stack from user input
-    public static Stack newStack() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("How many names should the stack hold?");
-        int size = input.nextInt();
-        Stack s1 = new Stack(size);
-        return s1;
+    //Construct a stack from a stack
+    Stack (Stack ob) {
+        index = ob.index;
+        s = new int[ob.s.length];
+        //copy elements
+        for (int i = 0; i < index; i++)
+            s[i] = ob.s[i];
     }
-    // Push a string into the Stack
-    String push(String words)
+    // Construct a stack with initial values
+    Stack(int a[]) {
+        s = new int[a.length];
+
+        for (int i = 0; i < a.length; i++){
+            try {
+                push(a[i]);
+            }catch(StackFullException exc) {
+                System.out.println(exc);
+            }
+        }
+    }
+    // Push numbers into the Stack
+    void push(int numbers)
         throws StackFullException{
         if(index==s.length) {
-            exceptionFlag = -1;
             throw new StackFullException(s.length);
             }
-        s[index] = words;
+        s[index] = numbers;
         index++;
-        return "added";
     }
     // Pop a string from the Stack
-    String pop()
+    int pop()
         throws StackEmptyException{
-        if(index < 0) {
-            exceptionFlag = -1;
-            throw new StackEmptyException();
+        if(index == 0) {
+           throw new StackEmptyException();
         }
-            int popIndex = index-1;
         index--;
-        return s[popIndex];
+        return s[index];
     }
-    // Add strings from the user to a stack
-    void addWords(Stack stack)
-            throws StackFullException{
-        Scanner input = new Scanner(System.in);
-        System.out.println("How many names would you like to add to the stack now?");
-        int numberNew = input.nextInt();
-        int i = 0;
-        System.out.println("Type each name, pressing enter between each one.");
-        while (i < numberNew){
-            Scanner input2 = new Scanner(System.in);
-            String words = input2.next();
-            stack.push(words);
-            if (exceptionFlag == -1) break;
-            i++;
-        }
-    }
-    //Remove user-defined number of strings from the stack
-    void removeWords(Stack stack)
-            throws StackEmptyException{
-        Scanner input = new Scanner(System.in);
-        System.out.println("How many names would you like to remove from the stack now?");
-        int numberRemove = input.nextInt();
-        int i = 0;
-        while (i < numberRemove) {
-            System.out.println(stack.pop());
-            if (exceptionFlag == -1) break;
-            i++;
-        }
-    }
-    //get user input to determine next step
-    static int whatNow() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("What would you like to do now?\n" +
-                "1. Add more names\n" +
-                "2. Remove more names\n" +
-                "3. Quit");
-        int next = input.nextInt();
-        return next;
-    }
-    //repeat process until quit
-
 }
 class StackDemo {
     public static void main(String args[])
             throws StackFullException, StackEmptyException{
-        System.out.println("Let's create a stack of names!");
-        // construct empty Stack with user defined length
-        Stack s1 = Stack.newStack();
-        //add strings to that stack
-        s1.addWords(s1);
-        //remove strings from the stack
-        s1.removeWords(s1);
+        //construct 10-element empty stack
+        Stack s1 = new Stack(10);
 
-        for (;;) {
-            int next = Stack.whatNow();
-            if (next == 1) s1.addWords(s1);
-            else if (next == 2) s1.removeWords(s1);
-            else break;
+        int numbers[] = {8,6,7,5,3,0,9};
+
+        //construct stack from array
+        Stack s2 = new Stack(numbers);
+
+        int number;
+        int i;
+
+        //put numbers into s1
+        for (i=0; i< 10; i++)
+            s1.push(i);
+        //construct stack from another stack
+        Stack s3 = new Stack(s1);
+        //show the stacks
+        System.out.print("Contents of s1: ");
+        for (i=0; i<10; i++){
+            number = s1.pop();
+            System.out.print(number);
+        }
+        System.out.println("\n");
+        System.out.println("Contents of s2: ");
+        for (i=0; i<7; i++){
+            number = s2.pop();
+            System.out.print(number);
+        }
+        System.out.println("\n");
+        System.out.println("Contents of s3: ");
+        for (i=0; i<10; i++){
+            number = s3.pop();
+            System.out.print(number);
         }
     }
 }
 class StackFullException extends Exception {
-    int size;
+    private int size;
     StackFullException(int size){
         this.size = size;
     }

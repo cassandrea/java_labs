@@ -2,8 +2,9 @@
 Using MySQLWorkbench do the following
 
 1) create a new blank database with the name "car_dealership"
+CREATE SCHEMA `car_dealership` ;
 
-2) create a new table named "clients" with the following fields:
+create a new table named "clients" with the following fields:
     - id (auto increment)
     - userID (refers to "id" in users table)
     - carID (refers to "id" in cars table)
@@ -23,41 +24,52 @@ Using MySQLWorkbench do the following
 
 4) populate these tables with at least 5 records each - the more the merrier
 
+
 5) Write the SQL queries to accomplish the following: (write each of your queries below for review)
     - select all records from clients
         SELECT *
         FROM clients;
     - select all records from clients where car make = "Toyota"
-        SELECT *
-        FROM clients
-        WHERE car_make='Toyota';
+        SELECT u.first_name, u.last_name, cr.make, cr.model
+        FROM users u
+        JOIN clients cl ON cl.userID = u.id
+        JOIN cars cr ON cl.carID = cr.id
+        WHERE cr.make = 'Toyota';
+
     - use a join to select all makes and models that a dealer has sold
-        ///
+        select cr.make, cr.model, u.first_name, u.last_name
+        FROM cars cr
+        JOIN clients cl ON cl.carID = cr.id
+        JOIN users u ON cl.dealerID = u.id
+        Order by u.id;
 
     - use a left join to select the first and last name of everyone who has bought a red car
-        SELECT users.first_name, users.last_name
-        FROM users
-        LEFT JOIN clients ON ///;
+        select u.first_name, u.last_name, cr.make, cr.model, cr.color
+        from users u
+        left join clients cl on cl.userID = u.id
+        left join cars cr on cl.carID = cr.id
+        where cr.color = 'Red';
+
     - use an insert statement to create a new record in each table
-        INSERT INTO clients
-        VALUES ///;
+        INSERT INTO clients (userID, carID, dealerID)
+        VALUES (1,9,11);
 
-        INSERT INTO users
-        VALUES (10001, Cass, Steiner);
+        INSERT INTO users (first_name, last_name)
+        VALUES ('Winda', 'Florencia');
 
-        INSERT INTO cars
-        VALUES (10001, Volkswagen, Golf, black, 2015);
+        INSERT INTO cars (make, model, color, year)
+        VALUES ('Volkswagen', 'Jetta', 'Blue', 2016);
+
     - create a new table named "test" with at least two fields
         CREATE TABLE test (
-            id INT,
-            date DATE(),
-            );
+        id INT,
+        date DATE);
     - use sql to drop the the "test" table
         DROP TABLE test;
     - use sql to update a record in the "cars" table
         UPDATE cars
-        SET make = Volkswagen
-        WHERE model = Golf;
+        SET color = 'Red'
+        WHERE id = 3;
 
 6) Using MySQLWorkbench, export the the "clients", "users" and "cars" schema with all objects and data into a
 self-contained sql file. - check the exported file into git

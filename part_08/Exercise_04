@@ -2,11 +2,33 @@
 Using Mysql shell do the following: write down each command you execute below for review.
 
 - restore (populate) the sample employees database as illustrated here:
-https://dev.mysql.com/doc/refman/5.7/en/mysqldump-sql-format.html
+https://dev.mysql.com/doc/employee/en/employees-installation.html
 - connect to your mysql via command line
 - select a database to use
 - run a variety of select queries against the various tables in employees db
 - use a join query against at least two tables
 - create a backup dump file of the employees database as illustrated here: https://dev.mysql.com/doc/refman/5.7/en/mysqldump-sql-format.html
+
+cd codingNomads/mySQLSampleData/test_db/
+mysql -t -u root -p < employees.sql
+mysql -u root -p
+show databases;
+use employees;
+show tables;
+describe employee;
+select max(birth_date)
+    from employees;
+describe titles;
+select max(birth_date)
+    from employees;
+select e.first_name, e.last_name, t.from_date
+    from employees e
+    join titles t on e.emp_no = t.emp_no
+    where t.title='Manager'
+    order by t.from_date desc;
+mysqldump -u root -p employees > testDump3.30.17.sql
+
+
+
 
 
