@@ -1,7 +1,8 @@
 package part_09;
 
-class QExcDemo {
-    public static void main(String args[]) {
+class QExcDemo implements Runnable{
+    @Override
+    public void run() {
         SyncedQueue q = new SyncedQueue(10);
         char ch;
         int i;
@@ -33,6 +34,10 @@ class QExcDemo {
             System.out.println(exc);
         }
     }
+    public static void main(String args[]) {
+        QExcDemo exc = new QExcDemo();
+        exc.run();
+    }
 }
 public class SyncedQueue implements ICharQ{
     private char q[]; // this array holds the queue
@@ -44,14 +49,14 @@ public class SyncedQueue implements ICharQ{
         putloc = getloc = 0;
     }
     // Put a character into the queue.
-    public void put(char ch)
+    synchronized public void put(char ch)
             throws QueueFullException {
         if(putloc==q.length)
             throw new QueueFullException(q.length);
         q[putloc++] = ch;
     }
     // Get a character from the queue.
-    public char get()
+    synchronized public char get()
             throws QueueEmptyException {
         if(getloc == putloc)
             throw new QueueEmptyException();

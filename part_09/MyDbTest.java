@@ -32,7 +32,7 @@ public class MyDbTest {
             Class.forName("com.mysql.jdbc.Driver");
             // Setup the connection with the DB
             connection = DriverManager.getConnection("jdbc:mysql://localhost/car_dealership?" +
-                    "user=cass&password=cass3134&useSSL=false");
+                    "user=USER&password=PASSWORD&useSSL=false");
             // Statements allow to issue SQL queries to the database
             //statement = connection.createStatement();
            }
