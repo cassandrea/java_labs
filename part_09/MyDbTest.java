@@ -112,11 +112,11 @@ public class MyDbTest {
             String endMonthYear = resultSet.getString("endMonthYear");
             double monthlyPayment = resultSet.getDouble("monthlyPayment");
             System.out.println("Contract Number: " + contractNumber);
-            System.out.println("userID: " + userID);
-            System.out.println("carID: " + carID);
-            System.out.println("carID: " + startMonthYear);
-            System.out.println("carID: " + endMonthYear);
-            System.out.println(": " + monthlyPayment);
+            System.out.println("User ID: " + userID);
+            System.out.println("Car ID: " + carID);
+            System.out.println("Start Month and Year: " + startMonthYear);
+            System.out.println("End Month and Year: " + endMonthYear);
+            System.out.println("Monthly Payment: " + monthlyPayment);
             System.out.println("---------------------------------");
             System.out.println("---------------------------------");
         }
